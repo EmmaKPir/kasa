@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 
 function Header (){
     return (
-        <header>
+        <header className='kasa-header'>
             <img src={logo} alt='kasa'/>
             <nav>
                 <Link to="/">Accueil</Link>

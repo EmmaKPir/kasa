@@ -1,10 +1,8 @@
-import Header from "../../Components/Header"
+import Falaise from "../../assets/falaise.png"
 
 const Home = () => {
    return (
-    <div>
-      <div>{Header}</div>
-    </div>
+    <img className="kasa-falaise" src={Falaise} alt="falaise"/>
    )
   }
 

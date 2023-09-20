@@ -14,7 +14,7 @@ function AppRouter () {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/logement" element={<Logement />} />
-              <Route path="/Error" element={<Error />} />
+              <Route path="*" element={<Error />} />
           </Routes>
       </Router>
 )}

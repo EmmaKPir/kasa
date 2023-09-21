@@ -5,6 +5,7 @@ import About from "../pages/About"
 import Logement from "../pages/Logement"
 import Error from "../pages/Error"
 import Header from "../Components/Header"
+import Footer from "../Components/Footer"
 
 function AppRouter () {
       return (
@@ -16,6 +17,7 @@ function AppRouter () {
               <Route path="/logement" element={<Logement />} />
               <Route path="*" element={<Error />} />
           </Routes>
+          <Footer/>
       </Router>
 )}
 

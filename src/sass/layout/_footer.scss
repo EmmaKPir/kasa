@@ -1,0 +1,27 @@
+@use "../utils/variables" as *;
+
+.kasa-footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    height: 209px;
+    width: 100%;
+    background-color: $third-color;
+}
+
+.kasa-logo2 {
+    height: 39px;
+    width: 8%;
+    margin: auto;
+    display: flex;
+    align-content: center;
+}
+
+.kasa-footer-text {
+    color: $second-color;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    Size : 24px;
+}

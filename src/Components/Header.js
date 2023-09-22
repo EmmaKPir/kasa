@@ -5,7 +5,7 @@ function Header (){
     return (
         <header className='kasa-header'>
             <img src={logo} alt='kasa'/>
-            <nav>
+            <nav className='kasa-nav'>
                 <Link to="/">Accueil</Link>
                 <Link to="/about">A Propos</Link>       
             </nav>

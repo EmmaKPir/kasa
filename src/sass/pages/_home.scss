@@ -1,16 +1,16 @@
 @use "../utils/variables" as *;
 .kasa-banner {
    width: 100%; 
+   position: relative;
 }
 .kasa-falaise {
     width: 86%;
     height: 223px;
-    position: relative;
     border-radius: 25px;
     object-fit: cover;
     margin-right: 0;
     margin-left: 100px;
-    mix-blend-mode: darken;
+    filter: brightness(0.6);
 }
 
 .kasa-falaise-text {
@@ -20,6 +20,8 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    top: 92px;
+    font-size: 48px;
 }
 
 .kasa-card {

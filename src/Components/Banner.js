@@ -1,10 +1,11 @@
-import Falaise from "../assets/falaise.png"
+import React from 'react'
 
-const Banner = () => {
+
+const Banner = ({imageSource, showText}) => {
    return (
     <div className="kasa-banner">
-        <img className="kasa-falaise" src={Falaise} alt="falaise"/>
-        <p className="kasa-falaise-text">Chez vous, partout et ailleurs</p>
+        <img className="kasa-falaise" src={imageSource} alt="falaise"/>
+        {showText && <p className="kasa-falaise-text">Chez vous, partout et ailleurs</p>}
     </div>
    )
   }

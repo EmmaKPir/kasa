@@ -1,8 +1,13 @@
+import Banner from '../Components/Banner'
+import Collapse from '../Components/Collapse'
+import Montagne from '../assets/montagne.png'
+
 const About = () => {
 return(
-
-      <h1>About</h1>
- 
+  <div>
+    <Banner imageSource={Montagne}/>
+    <Collapse />
+  </div>
   )
 }
 export default About

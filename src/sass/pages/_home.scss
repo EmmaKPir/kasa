@@ -4,12 +4,12 @@
    position: relative;
 }
 .kasa-falaise {
-    width: 86%;
+    width: 91%;
     height: 223px;
     border-radius: 25px;
     object-fit: cover;
     margin-right: 0;
-    margin-left: 100px;
+    margin-left: 57px;
     filter: brightness(0.6);
 }
 
@@ -23,14 +23,74 @@
     top: 92px;
     font-size: 48px;
 }
-
-.kasa-card {
-    width: 1240px;
-    height: 829px;
-    flex-shrink: 0;
-    width: 1240px;
+.kasa-container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 87%;
+    height: 100%;
     border-radius: 25px;
     background: #F6F6F6;
-    margin-left: 100px;
-    margin-top: 43px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 56px 3px 0 50px;
+}
+
+.kasa-card {
+    gap : 50px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.kasa-card-photo {
+    border-radius: 10px;
+    width: 340px;
+    height: 340px;
+}
+
+.kasa-card-txt {
+    position: absolute;
+    color: $second-color;
+    bottom: 34px;
+    left: 12px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    width: 80%;
+}
+
+@media (min-width: 943px) and (max-width: 1024px) {
+    .kasa-card-photo {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 942px) {
+    .kasa-card-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .kasa-card-txt {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 774px) {
+    .kasa-card-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .kasa-container-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kasa-card-txt{
+        width: 70%;
+    }
 }

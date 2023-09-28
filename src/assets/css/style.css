@@ -74,7 +74,7 @@ table {
   justify-content: space-around;
   color: #FF6060;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 2.5vw;
 }
 
 .kasa-nav a:hover {
@@ -105,6 +105,10 @@ table {
   justify-content: center;
   margin-bottom: 40px;
   Size: 24px;
+}
+
+.kasa-container-collapse {
+  margin-top: 38px;
 }
 
 .kasa-collapse {
@@ -144,6 +148,11 @@ table {
   height: 60px;
 }
 
+.kasa-collapse img {
+  width: 24px;
+  height: 24px;
+}
+
 .kasa-collapse button {
   background: #FF6060;
   width: 24px;
@@ -152,10 +161,12 @@ table {
   position: absolute;
   right: 10px;
   top: 2px;
+  border-radius: 50%;
+  padding: 0;
 }
 
 .rotate180 {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   animation-name: rotate;
   animation-duration: 500ms;
 }
@@ -268,6 +279,44 @@ table {
   .kasa-card-txt {
     width: 70%;
   }
+}
+.kasa-error-number {
+  color: #FF6060;
+  text-align: center;
+  font-family: Montserrat;
+  width: 100%;
+  font-size: 25vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.6%;
+  margin-bottom: 139px;
+}
+
+.kasa-error-txt {
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  text-align: center;
+  margin-bottom: 139px;
+}
+
+.kasa-error-home a {
+  display: flex;
+  justify-content: center;
+  color: #FF6060;
+  font-family: Montserrat;
+  width: 50%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  text-decoration-line: underline;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 139px;
 }
 
 /*# sourceMappingURL=style.css.map */

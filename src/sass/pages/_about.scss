@@ -1,5 +1,9 @@
 @use "../utils/variables" as *;
 
+.kasa-container-collapse {
+    margin-top: 38px;
+}
+
 .kasa-collapse {
     display: flex;
     flex-direction: column;
@@ -37,6 +41,10 @@
     height: 60px;
     
 }
+.kasa-collapse img {
+    width: 24px;
+    height: 24px;
+}
 
 .kasa-collapse button {
     background: $primary-color;
@@ -46,10 +54,12 @@
     position: absolute;
     right: 10px;
     top: 2px;
+    border-radius: 50%;
+    padding: 0;
 }
 
 .rotate180 {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
     animation-name: rotate;
     animation-duration: 500ms;
 }

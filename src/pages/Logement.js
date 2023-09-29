@@ -3,9 +3,9 @@ import Collapse from "../Components/Collapse"
 import Slideshow from "../Components/Slideshow"
 
 function Logement () {
-  const [dataLoc, setData]=useState([])
+/*  const [data, setData]=useState([])
   const getData= ()=> {
-     fetch('./data.json'
+     fetch('../../data.json'
      ,{
         headers : {
            'Content-Type' : 'application/json',
@@ -28,10 +28,8 @@ function Logement () {
    return (
    <div>
       <div className="kasa-container-logement">
-         { dataLoc && dataLoc.length>0 && dataLoc.map (({id, title, pictures, description, host, location, rating, equipments, tags}) => 
-            <div>
+            <div key={id}>
               <Slideshow
-                key={id}
                 pictures={pictures}
               />
               <div className="kasa-log-title">
@@ -48,10 +46,11 @@ function Logement () {
                 equipments={equipments}
               />
            </div> 
-         )}
+         )
       </div>
    </div>
    )
+   */
   }
 
   export default Logement

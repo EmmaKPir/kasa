@@ -74,7 +74,7 @@ table {
   justify-content: space-around;
   color: #FF6060;
   text-decoration: none;
-  font-size: 2.5vw;
+  font-size: 1.5vw;
 }
 
 .kasa-nav a:hover {
@@ -116,7 +116,6 @@ table {
   flex-direction: column;
   position: relative;
   width: 72%;
-  height: 32px;
   margin: auto;
   margin-bottom: 30px;
 }
@@ -145,7 +144,7 @@ table {
   font-weight: 400;
   line-height: 142.6%;
   width: 100%;
-  height: 60px;
+  height: 100px;
 }
 
 .kasa-collapse img {
@@ -189,7 +188,8 @@ table {
   }
 }
 .kasa-banner {
-  width: 100%;
+  width: 94%;
+  margin: auto;
   position: relative;
 }
 
@@ -212,32 +212,42 @@ table {
   justify-content: center;
   top: 92px;
   font-size: 48px;
+  color: #FFF;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .kasa-container-card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 29% 29% 29%;
   align-items: center;
-  width: 87%;
+  width: 81%;
   height: 100%;
   border-radius: 25px;
   background: #F6F6F6;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 50px;
-  padding: 56px 3px 0 50px;
+  padding: 50px 3px 50px 60px;
+  gap: 50px;
+}
+
+.kasa-container-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .kasa-card {
-  gap: 50px;
   position: relative;
-  margin-bottom: 50px;
 }
 
 .kasa-card-photo {
   border-radius: 10px;
   width: 340px;
   height: 340px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .kasa-card-txt {
@@ -317,6 +327,10 @@ table {
   align-items: center;
   margin: auto;
   margin-bottom: 139px;
+}
+
+.kasa-container-logement {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

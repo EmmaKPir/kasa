@@ -1,56 +1,45 @@
-import React, {useState, useEffect} from "react"
-import Collapse from "../Components/Collapse"
-import Slideshow from "../Components/Slideshow"
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Slideshow from "../Components/Slideshow";
 
-function Logement () {
-/*  const [data, setData]=useState([])
-  const getData= ()=> {
-     fetch('../../data.json'
-     ,{
-        headers : {
-           'Content-Type' : 'application/json',
-           'Accept' : 'application/json'
-        }
-     }
-     )
-        .then(function(response){
-           console.log(response)
-           return response.json()
-        })
-        .then (function(myJson){
-           console.log(myJson)
-           setData(myJson)
-        })
-  }
-  useEffect(() => {
-     getData()
-  }, [])
+function Logement() {
+   const [logement, setDataLogement] = useState(null)
+   const location = useLocation()
+
+   useEffect(() => {
+      if (location.state && location.state.logementId) {
+         fetch('../../data.json', {
+            headers: {
+               'Content-Type': 'application/json',
+               'Accept': 'application/json',
+            },
+         })
+            .then((response) => {
+               if (!response.ok) {
+                  throw new Error("Réponse du serveur non valide");
+               }
+               return response.json();
+            })
+            .then((logements) => {
+               const selectedLogement = logements.find((logement) => logement.id === location.state.logementId);
+               setDataLogement(selectedLogement);
+            })
+            .catch((error) => {
+               console.error("Erreur lors de la récupération des données:", error);
+            });
+      }
+   }, [location.state]);
+
+   //if (logement == null) return <p>Chargement en cours ...</p>;
    return (
-   <div>
       <div className="kasa-container-logement">
-            <div key={id}>
-              <Slideshow
-                pictures={pictures}
-              />
-              <div className="kasa-log-title">
-                <h1>{title}</h1>
-                <p>{location}</p>
-              </div>
-              <div className="kasa-log-host">{host}</div>
-              <div>
-                <p>{tags}</p>
-                <p>{rating} </p>
-              </div>
-              <Collapse 
-                description={description}
-                equipments={equipments}
-              />
-           </div> 
-         )
+         <Slideshow 
+            pictures={logement.pictures}
+            id= {logement.id}   
+         />
+         <h1>{logement.title}</h1>
       </div>
-   </div>
-   )
-   */
-  }
+   );
+}
 
-  export default Logement
+export default Logement;

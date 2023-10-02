@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import ChevronRight from '../assets/chevronRight.png'
 import ChevronLeft from '../assets/chevronLeft.png'
 
-function Slideshow ({id, pictures}) {
+function Slideshow ({pictures}) {
     const [current, setCurrent] = useState(0);
     const length = pictures.length;
 
@@ -15,11 +15,11 @@ function Slideshow ({id, pictures}) {
     }
     
     return (
-        <div key={id} className="kasa-container-slider">
-            <img src={pictures} className='slider-image' alt="location"/>
+        <div className="kasa-container-slider">
+            <img src={pictures[current]} className='slider-image' alt={`appartement${current +1}`}/>
             <img src={ChevronLeft} className='left-arrow' alt='left-arrow' onClick={prevPicture} />
             <img src={ChevronRight} className='right-arrow' alt='right-arrow' onClick={nextPicture}/>
-            <p>{current + 1}/length</p>
+            <p>{current + 1}/{length}</p>
         </div>
     )
 }

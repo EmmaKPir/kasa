@@ -32,7 +32,7 @@ function Home () {
       <div className="kasa-container-card">
          { data && data.length>0 && data.map (({id, title, cover}) => 
             <Card
-               key={id}
+               id={id}
                title={title}
                cover={cover}
             />

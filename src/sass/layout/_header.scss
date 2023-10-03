@@ -25,9 +25,25 @@
     justify-content: space-around;
     color: $primary-color;
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1.4em;
 }
 
-.kasa-nav a:hover {
+.kasa-nav a:hover::after {
     text-decoration: underline;
+}
+
+.kasa-nav a:active::after {
+    text-decoration: underline;
+}
+
+@media (max-width: 425px) {
+    .kasa-header img {
+        width: 50%;
+    }
+    .kasa-nav {
+        width: 38%;
+    }
+    .kasa-nav a {
+        font-size: 1em;
+    }
 }

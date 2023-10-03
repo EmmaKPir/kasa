@@ -1,6 +1,6 @@
 @use "../utils/variables" as *;
 .kasa-banner {
-   width: 94%; 
+   width: 84%; 
    margin: auto;
    position: relative;
 }
@@ -16,31 +16,31 @@
 
 .kasa-falaise-text {
     position: absolute;
-    width: 100%;
+    width: 77%;
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     top: 92px;
-    font-size: 48px;
+    left: 113px;
+    font-size: 3em;
     color: #FFF;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-
 }
+
 .kasa-container-card {
     display: grid;
-    grid-template-columns: 29% 29% 29%;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    width: 81%;
-    height: 100%;
+    width: 73%;
     border-radius: 25px;
     background: #F6F6F6;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 50px;
-    padding: 50px 3px 50px 60px;
+    padding: 50px 60px 50px 54px;
     gap: 50px;
 }
 
@@ -48,6 +48,21 @@
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 1%;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 52%, rgba(0, 0, 0, 0.50) 100%);
+        background-color: transparent;
+        z-index: 1;
+        border-radius: 10px;
+    }
 }
 
 .kasa-card {
@@ -56,9 +71,8 @@
 
 .kasa-card-photo {
     border-radius: 10px;
-    width: 340px;
+    width: 100%;
     height: 340px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
 }
 
 .kasa-card-txt {
@@ -72,31 +86,17 @@
     font-weight: 500;
     line-height: 142.6%;
     width: 80%;
-}
-
-@media (min-width: 943px) and (max-width: 1024px) {
-    .kasa-card-photo {
-        width: 250px;
-        height: 250px;
-    }
+    z-index: 2;
 }
 
 @media (min-width: 768px) and (max-width: 942px) {
-    .kasa-card-photo {
-        width: 200px;
-        height: 200px;
-    }
 
     .kasa-card-txt {
         font-size: 16px;
     }
 }
 
-@media (min-width: 425px) and (max-width: 774px) {
-    .kasa-card-photo {
-        width: 250px;
-        height: 250px;
-    }
+@media (min-width: 426px) and (max-width: 774px) {
 
     .kasa-container-card {
         grid-template-columns: 1fr 1fr;
@@ -104,5 +104,20 @@
 
     .kasa-card-txt{
         width: 70%;
+    }
+}
+
+@media (max-width: 425px) {
+    .kasa-banner {
+        margin: 0;
+     }
+
+    .kasa-falaise-text {
+        font-size: 2em;
+        width: 57%;
+    }
+
+    .kasa-container-card {
+        grid-template-columns: 1fr;
     }
 }

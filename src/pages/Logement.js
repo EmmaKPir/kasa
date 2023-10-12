@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Collapse from "../Components/Collapse";
 import Slideshow from "../Components/Slideshow";
+import StarRating from "../Components/Rating";
 import { useNavigate, useParams} from "react-router-dom"
 
 const Logement = () => {
@@ -34,10 +35,13 @@ const Logement = () => {
    }, [navigate, id]);
 
    if (logementActif) {
-      const {title, location, tags, description} =
+      const {title, location, tags, description, equipments, host, rating} =
         logementActif;
 
-   
+   const listEquipments = equipments.map((equipment) => (
+      <li key={equipment}>{equipment}</li>
+   ))
+
    return (
       <div className="kasa-container-logement">
         {logementActif != null ? ( 
@@ -46,11 +50,19 @@ const Logement = () => {
           <h2 className="kasa-slider-title">{title}</h2>
           <p className="kasa-slider-location">{location}</p>
           <p className="kasa-slider-tags">{tags.map((tag) =>(
-            <li>{tag}</li>
+            <li key={tag}>{tag}</li>
           ))}</p>
+          <div className="kasa-host">
+            <p className="host-name">{host.name}</p>
+            <img src={host.picture} alt="face-host" className="host-picture"/>
+          </div>
+          <StarRating rating={rating}/>
         </div>
          ): null}
-         <Collapse/>
+          <div className="kasa-container-equipments">
+            <Collapse title="Description" txt={description}/>
+            <Collapse title="Équipements" txt={listEquipments}/>
+          </div>
       </div>
    )
 }

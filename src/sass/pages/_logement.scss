@@ -16,6 +16,7 @@
     width: 100%;
     height: 415px;
     border-radius: 10px;
+    object-fit: fill;
 }
 
 .right-arrow {
@@ -87,4 +88,44 @@
     flex-direction: row;
     width: 87%;
     margin: auto;
+}
+
+.kasa-container-equipments {
+    display: flex;
+    flex-direction: row;
+    width: 97%;
+    margin-left: 35px;
+
+}
+
+.kasa-container-equipments .kasa-collapse {
+    width: 46%;
+    margin-bottom: 50px;
+    margin-right: 95px;
+    margin-left: 57px;
+}
+//********** Host ********//
+.kasa-host {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 101px;
+    bottom:138px;
+}
+
+.host-picture {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.host-name {
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    text-align: right;
+    font-family: $style;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
 }

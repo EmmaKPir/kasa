@@ -27,19 +27,19 @@ function Home () {
       getData()
    }, [])
    return (
-   <div>
-      <Banner imageSource={Falaise} showText />
-      <div className="kasa-container-card">
-         { data && data.length>0 && data.map (({id, title, cover}) => 
-            <Card
-               id={id}
-               title={title}
-               cover={cover}
-            />
-         )}
+      <div>
+         <Banner imageSource={Falaise} showText />
+       <div className="kasa-container-card">
+            { data && data.length>0 && data.map (({id, title, cover}) => 
+               <Card
+                  id={id}
+                  title={title}
+                  cover={cover}
+               />
+            )}
+         </div>
       </div>
-   </div>
    )
-  }
+}
 
   export default Home

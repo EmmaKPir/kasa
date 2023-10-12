@@ -1,45 +1,59 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import Collapse from "../Components/Collapse";
 import Slideshow from "../Components/Slideshow";
+import { useNavigate, useParams} from "react-router-dom"
 
-function Logement() {
-   const [logement, setDataLogement] = useState(null)
-   const location = useLocation()
-
+const Logement = () => {
+   const params = useParams();
+   const navigate = useNavigate();
+   const id = params.id;
+   const [logementActif, setLogementActif] = useState(undefined);
+ 
    useEffect(() => {
-      if (location.state && location.state.logementId) {
-         fetch('../../data.json', {
-            headers: {
-               'Content-Type': 'application/json',
-               'Accept': 'application/json',
-            },
+     try {
+       fetch(`../../data.json`, {
+         headers: {
+           "Content-type": "Application/json",
+           Accept: "Application/json",
+         },
+       })
+         .then((response) => {
+           return response.json();
          })
-            .then((response) => {
-               if (!response.ok) {
-                  throw new Error("Réponse du serveur non valide");
-               }
-               return response.json();
-            })
-            .then((logements) => {
-               const selectedLogement = logements.find((logement) => logement.id === location.state.logementId);
-               setDataLogement(selectedLogement);
-            })
-            .catch((error) => {
-               console.error("Erreur lors de la récupération des données:", error);
-            });
-      }
-   }, [location.state]);
+         .then((data) => {
+           const dataLogement = data.find((logement) => logement.id === id);
+           if (dataLogement === undefined) {
+             navigate("*");
+           } else {
+             setLogementActif(dataLogement);
+           }
+         });
+     } catch (error) {
+       console.error(error);
+     }
+   }, [navigate, id]);
 
-   //if (logement == null) return <p>Chargement en cours ...</p>;
+   if (logementActif) {
+      const {title, location, tags, description} =
+        logementActif;
+
+   
    return (
       <div className="kasa-container-logement">
-         <Slideshow 
-            pictures={logement.pictures}
-            id= {logement.id}   
-         />
-         <h1>{logement.title}</h1>
+        {logementActif != null ? ( 
+        <div> 
+          <Slideshow currentLogement={logementActif} />
+          <h2 className="kasa-slider-title">{title}</h2>
+          <p className="kasa-slider-location">{location}</p>
+          <p className="kasa-slider-tags">{tags.map((tag) =>(
+            <li>{tag}</li>
+          ))}</p>
+        </div>
+         ): null}
+         <Collapse/>
       </div>
-   );
+   )
 }
 
+}
 export default Logement;

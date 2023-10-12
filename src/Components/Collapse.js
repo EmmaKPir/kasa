@@ -19,8 +19,8 @@ function Collapse({ collapse, title, text }) {
         />
       </button>
       {openCollapse && (
-        <div key={collapse} className={`toogle kasa-description ${openCollapse ? 'openText' : 'closeText'}`}>
-          <p className='kasa-description'>{text}</p>
+        <div key={collapse} className={`toogle kasa-container-description ${openCollapse ? 'openText' : 'closeText'}`}>
+          <p className={`toogle kasa-description ${openCollapse ? 'openText' : 'closeText'}`}>{text}</p>
         </div>
       )}
     </div>

@@ -39,7 +39,8 @@
     position: absolute;
     color: $second-color;
     bottom: 20px;
-    left: 600px;
+    left: 0;
+    right: 0;
     font-size: 18px;
 }
 
@@ -104,13 +105,31 @@
     margin-right: 95px;
     margin-left: 57px;
 }
+
+.kasa-container-equipments .kasa-container-description {
+    height: 100px;
+    color: $primary-color;
+}
+
+// ***** container host and rating
+
+.kasa-host-rating {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 15%;
+    right: 4px;
+    bottom: 163px;
+}
+
 //********** Host ********//
 .kasa-host {
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 101px;
-    bottom:138px;
+    right: 81px;
+    bottom: 56px;
 }
 
 .host-picture {
@@ -128,4 +147,56 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
+    width: 62%;
+    margin-right: 10px;
+}
+
+// ******** rating *******//
+
+
+.kasa-rating {
+    position: absolute;
+    width: 11%;
+    right: 153px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.kasa-star {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+@media (max-width: 980px) {
+    .kasa-host-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 5%;
+        position: inherit;
+        margin-bottom: 20px;
+    }
+
+    .kasa-host {
+        position: static;
+        width: 30%;
+        margin-right: 30px;
+    }
+
+    .kasa-rating {
+        position: static;
+        width: 60%;
+    }
+
+    .kasa-container-equipments {
+        display: flex;
+        flex-direction: column;
+        width: 77%;
+    }
+
+    .kasa-container-equipments .kasa-collapse {
+        width: 100%;
+    }
 }

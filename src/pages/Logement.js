@@ -52,16 +52,22 @@ const Logement = () => {
           <p className="kasa-slider-tags">{tags.map((tag) =>(
             <li key={tag}>{tag}</li>
           ))}</p>
-          <div className="kasa-host">
-            <p className="host-name">{host.name}</p>
-            <img src={host.picture} alt="face-host" className="host-picture"/>
-          </div>
-          <StarRating rating={rating}/>
+          <div className="kasa-host-rating">
+            <div className="kasa-host">
+              <p className="host-name">{host.name}</p>
+              <img src={host.picture} alt="face-host" className="host-picture"/>
+            </div>
+            <StarRating rating={rating}/>
+          </div>  
         </div>
          ): null}
           <div className="kasa-container-equipments">
-            <Collapse title="Description" txt={description}/>
-            <Collapse title="Équipements" txt={listEquipments}/>
+            <Collapse title="Description">
+              <p>{description}</p> 
+            </Collapse>
+            <Collapse title="Équipements">
+              <ul> {listEquipments} </ul> 
+            </Collapse>
           </div>
       </div>
    )

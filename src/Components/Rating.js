@@ -5,12 +5,12 @@ function StarRating ({rating}) {
     rating = Math.min(5, Math.max(0, rating))
    
     return (
-        <div>
+        <div className="kasa-rating">
             {Array (rating).fill (
-                <img src={filledStar} alt="filled-star"/>
+                <img src={filledStar} alt="filled-star" className='kasa-star'/>
             )}
             {Array (5 - rating).fill(
-                <img src={emptyStar} alt="empty-star"/>
+                <img src={emptyStar} alt="empty-star" className='kasa-star'/>
             )}
         </div>
     )

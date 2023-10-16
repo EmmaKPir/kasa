@@ -45,7 +45,7 @@ const Logement = () => {
    return (
       <div className="kasa-container-logement">
         {logementActif != null ? ( 
-        <div> 
+        <div className="kasa-logement"> 
           <Slideshow currentLogement={logementActif} />
           <h2 className="kasa-slider-title">{title}</h2>
           <p className="kasa-slider-location">{location}</p>
@@ -62,12 +62,14 @@ const Logement = () => {
         </div>
          ): null}
           <div className="kasa-container-equipments">
-            <Collapse title="Description">
-              <p>{description}</p> 
-            </Collapse>
-            <Collapse title="Équipements">
-              <ul> {listEquipments} </ul> 
-            </Collapse>
+            <Collapse 
+              title="Description"
+              text={description}
+            />
+            <Collapse 
+              title="Équipements" 
+              text={listEquipments}
+            />
           </div>
       </div>
    )

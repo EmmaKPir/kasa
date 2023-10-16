@@ -108,7 +108,7 @@ table {
 
 .kasa-logo2 {
   height: 39px;
-  width: 8%;
+  width: 122px;
   margin: auto;
   display: flex;
   align-content: center;
@@ -150,7 +150,6 @@ table {
 }
 
 .kasa-description {
-  display: block;
   color: #FF6060;
   background: #F6F6F6;
   font-family: Montserrat;
@@ -228,26 +227,31 @@ table {
 }
 .openText {
   animation-name: openText;
-  animation-duration: 300ms;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }
 
 @keyframes openText {
   0% {
-    max-height: 2px;
+    max-height: 0;
+    transform: translateY(O);
   }
-  25% {
+  5% {
     max-height: 5px;
+    transform: translateY(5%);
   }
-  50% {
-    max-height: 15px;
+  10% {
+    max-height: 10px;
+    transform: translateY(10%);
   }
-  75% {
+  20% {
     max-height: 20px;
+    transform: translateY(20%);
   }
   100% {
     max-height: 100px;
+    transform: translateY(1%);
   }
 }
 .closeText {
@@ -259,28 +263,25 @@ table {
 
 @keyframes closeText {
   0% {
-    max-height: 100px;
+    max-height: 2000px;
   }
   25% {
     max-height: 20px;
+    transform: translateY(-20px);
   }
   50% {
     max-height: 15px;
+    transform: translateY(-15px);
   }
   75% {
     max-height: 5px;
+    transform: translateY(-5px);
   }
   100% {
     max-height: 2px;
+    transform: translateY(-2px);
   }
 }
-.kasa-description p {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(-100%);
-  transition: transform 300ms ease;
-}
-
 .kasa-banner {
   width: 84%;
   margin: auto;
@@ -441,6 +442,10 @@ table {
   text-align: center;
 }
 
+.kasa-logement {
+  position: relative;
+}
+
 .kasa-container-slider {
   width: 87%;
   position: relative;
@@ -490,6 +495,7 @@ table {
   width: 87%;
   display: flex;
   margin: auto;
+  text-align: left;
 }
 
 .kasa-slider-location {
@@ -531,7 +537,7 @@ table {
   display: flex;
   flex-direction: row;
   width: 97%;
-  margin-left: 35px;
+  margin: auto;
 }
 
 .kasa-container-equipments .kasa-collapse {
@@ -541,9 +547,8 @@ table {
   margin-left: 57px;
 }
 
-.kasa-container-equipments .kasa-container-description {
-  height: 100px;
-  color: #FF6060;
+.kasa-container-description p {
+  vertical-align: middle;
 }
 
 .kasa-host-rating {
@@ -552,8 +557,8 @@ table {
   flex-direction: column;
   width: 50%;
   height: 15%;
-  right: 4px;
-  bottom: 163px;
+  right: 34px;
+  bottom: 0px;
 }
 
 .kasa-host {
@@ -598,31 +603,43 @@ table {
   margin-right: 5px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   .kasa-host-rating {
     display: flex;
     flex-direction: row-reverse;
-    width: 100%;
+    justify-content: center;
+    width: 86%;
     height: 5%;
     position: inherit;
-    margin-bottom: 20px;
+    margin: auto;
+    right: 0;
   }
   .kasa-host {
     position: static;
-    width: 30%;
-    margin-right: 30px;
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .host-name {
+    width: 56%;
   }
   .kasa-rating {
     position: static;
-    width: 60%;
+    width: 79%;
+    align-items: center;
+  }
+  .kasa-star {
+    width: 21px;
+    height: 21px;
   }
   .kasa-container-equipments {
     display: flex;
     flex-direction: column;
-    width: 77%;
+    width: 86%;
   }
   .kasa-container-equipments .kasa-collapse {
     width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
   }
 }
 

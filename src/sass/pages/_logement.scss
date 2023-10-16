@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+.kasa-logement {
+    position: relative;
+}
+
 .kasa-container-slider {
     width: 87%;
     position: relative;
@@ -54,6 +58,7 @@
     width: 87%;
     display: flex;
     margin: auto;
+    text-align: left;
 }
 
 .kasa-slider-location {
@@ -95,8 +100,7 @@
     display: flex;
     flex-direction: row;
     width: 97%;
-    margin-left: 35px;
-
+    margin: auto;
 }
 
 .kasa-container-equipments .kasa-collapse {
@@ -106,9 +110,8 @@
     margin-left: 57px;
 }
 
-.kasa-container-equipments .kasa-container-description {
-    height: 100px;
-    color: $primary-color;
+.kasa-container-description p{
+    vertical-align: middle;
 }
 
 // ***** container host and rating
@@ -119,8 +122,8 @@
     flex-direction: column;
     width: 50%;
     height: 15%;
-    right: 4px;
-    bottom: 163px;
+    right: 34px;
+    bottom: 0px;
 }
 
 //********** Host ********//
@@ -169,34 +172,48 @@
     margin-right: 5px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
     .kasa-host-rating {
         display: flex;
         flex-direction: row-reverse;
-        width: 100%;
+        justify-content: center;
+        width: 86%;
         height: 5%;
         position: inherit;
-        margin-bottom: 20px;
+        margin :auto;
+        right: 0;
     }
 
     .kasa-host {
         position: static;
-        width: 30%;
-        margin-right: 30px;
+        width: 40%;
+        margin-bottom: 20px;
+    }
+
+    .host-name {
+        width: 56%;
     }
 
     .kasa-rating {
         position: static;
-        width: 60%;
+        width: 79%;
+        align-items: center;
+    }
+
+    .kasa-star {
+        width: 21px;
+        height: 21px;
     }
 
     .kasa-container-equipments {
         display: flex;
         flex-direction: column;
-        width: 77%;
+        width: 86%;
     }
 
     .kasa-container-equipments .kasa-collapse {
         width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
     }
 }

@@ -110,7 +110,7 @@
 // animation open and close text
 .openText {
    animation-name: openText;
-   animation-duration: 1s;
+   animation-duration: 600ms;
    animation-fill-mode: forwards;
    animation-timing-function: linear;
 }
@@ -118,29 +118,24 @@
 @keyframes openText {
     0% {
         max-height: 0;
-        transform: translateY(O);
+        opacity: 0;
+        transform: translateY(-20%);
+        transform-origin: top;
     }    
-    5% {
+    30% {
         max-height: 5px;
-        transform: translateY(5%);
-    }
-    10% {
-        max-height: 10px;
-        transform: translateY(10%);
-    }
-    20% {
-        max-height: 20px;
-        transform: translateY(20%);
+        opacity: 0;
     }
     100% {
-        max-height: 100px;
-        transform: translateY(1%);
+        max-height: 2000px;
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 .closeText {
     animation-name: closeText;
-    animation-duration: 500ms;
+    animation-duration: 600ms;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
@@ -148,21 +143,16 @@
 @keyframes closeText {
     0% {
         max-height: 2000px;
+        transform: translateY(0);
+        opacity: 1;
     }
-    25% {
-        max-height: 20px;
-        transform: translateY(-20px);
-    }
-    50% {
-        max-height: 15px;
-        transform: translateY(-15px);
-    }
-    75% {
-        max-height: 5px;
-        transform: translateY(-5px);
+    30% {
+
+        opacity: 0;
     }
     100% {
-        max-height: 2px;
-        transform: translateY(-2px);
+        opacity: 0;
+        transform: translateY(-20%);
+        transform-origin: top;
     }
 }

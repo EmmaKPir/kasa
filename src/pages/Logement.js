@@ -24,7 +24,7 @@ const Logement = () => {
          .then((data) => {
            const dataLogement = data.find((logement) => logement.id === id);
            if (dataLogement === undefined) {
-             navigate("*");
+             navigate("/not-found");
            } else {
              setLogementActif(dataLogement);
            }

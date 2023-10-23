@@ -16,8 +16,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
+
 .kasa-nav a {
     display: flex;
     flex-direction: row;
@@ -26,24 +26,23 @@
     color: $primary-color;
     text-decoration: none;
     font-size: 1.4em;
-}
-
-.kasa-nav a:hover::after {
-    text-decoration: underline;
-}
-
-.kasa-nav a:active::after {
-    text-decoration: underline;
-}
-
-@media (max-width: 425px) {
-    .kasa-header img {
-        width: 50%;
+    &.active {
+        text-decoration: underline;
     }
+}
+
+@media (max-width: 892px) {
     .kasa-nav {
-        width: 38%;
+        width: 47%;
     }
-    .kasa-nav a {
-        font-size: 1em;
+}
+
+@media (max-width: 491px ) {
+    .kasa-header img {
+        width: 29%;
+    }
+
+    .kasa-nav {
+        width: 55%;
     }
 }

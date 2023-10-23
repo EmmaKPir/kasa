@@ -76,24 +76,21 @@ table {
   text-decoration: none;
   font-size: 1.4em;
 }
-
-.kasa-nav a:hover::after {
+.kasa-nav a.active {
   text-decoration: underline;
 }
 
-.kasa-nav a:active::after {
-  text-decoration: underline;
+@media (max-width: 892px) {
+  .kasa-nav {
+    width: 47%;
+  }
 }
-
-@media (max-width: 425px) {
+@media (max-width: 491px) {
   .kasa-header img {
-    width: 50%;
+    width: 29%;
   }
   .kasa-nav {
-    width: 38%;
-  }
-  .kasa-nav a {
-    font-size: 1em;
+    width: 55%;
   }
 }
 .kasa-footer {
@@ -278,12 +275,11 @@ table {
 }
 
 .kasa-falaise {
-  width: 91%;
+  width: 100%;
   height: 223px;
   border-radius: 25px;
   object-fit: cover;
   margin-right: 0;
-  margin-left: 57px;
   filter: brightness(0.6);
 }
 
@@ -363,8 +359,9 @@ table {
 }
 
 @media (min-width: 768px) and (max-width: 942px) {
-  .kasa-card-txt {
-    font-size: 16px;
+  .kasa-falaise-text {
+    text-align: left;
+    left: 50px;
   }
 }
 @media (min-width: 426px) and (max-width: 774px) {
@@ -376,15 +373,16 @@ table {
   }
 }
 @media (max-width: 425px) {
-  .kasa-banner {
-    margin: 0;
-  }
   .kasa-falaise-text {
     font-size: 2em;
     width: 57%;
   }
   .kasa-container-card {
     grid-template-columns: 1fr;
+  }
+  .kasa-falaise-text {
+    text-align: left;
+    left: 50px;
   }
 }
 .kasa-error-number {

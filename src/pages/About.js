@@ -13,9 +13,10 @@ const About = () => {
 return(
   <div>
     <Banner imageSource={Montagne} />
-    {collapseData.map(({title, text}) => (
-    <div className='kasa-container-collapse'>
-    <Collapse 
+    {collapseData.map(({collapse, title, text}) => (
+    <div key={collapse} className='kasa-container-collapse'>
+    <Collapse
+      key={collapse} 
       title={title}
       text={text}
     />

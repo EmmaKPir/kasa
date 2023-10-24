@@ -14,7 +14,7 @@ return(
   <div>
     <Banner imageSource={Montagne} />
     {collapseData.map(({collapse, title, text}) => (
-    <div key={collapse} className='kasa-container-collapse'>
+    <div className='kasa-container-collapse'>
     <Collapse
       key={collapse} 
       title={title}

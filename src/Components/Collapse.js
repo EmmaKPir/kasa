@@ -9,20 +9,18 @@ function Collapse({ collapse, title, text }) {
   };
 
   return (
-    <div className="kasa-collapse">
-      <p className='kasa-quality'>{title}</p>
-      <button onClick={handleToggle}>
-        <img
-          src={chevron}
-          alt='chevron'
-          className={`toogle ${openCollapse ? 'rotate180' : 'reverse'}`}
-        />
-      </button>
-      {openCollapse && (
-        <div key={collapse} className={`toogle kasa-container-description ${openCollapse ? 'openText' : 'closeText'}`}>
-          <p className={`toogle kasa-description ${openCollapse ? 'openText' : ''}`}>{text}</p>
+      <div className="kasa-collapse">
+        <p className='kasa-quality'>{title}</p>
+        <button onClick={handleToggle}>
+          <img
+            src={chevron}
+            alt='chevron'
+            className={`toogle ${openCollapse ? 'rotate180' : 'reverse'}`}
+          />
+       </button>
+        <div key={collapse} className={`kasa-description ${openCollapse ? 'openText' : 'closeText'}`}>
+          {text}
         </div>
-      )}
     </div>
   );
 }

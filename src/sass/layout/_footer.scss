@@ -25,3 +25,11 @@
     margin-bottom: 40px;
     Size : 24px;
 }
+
+@media (max-width: 375px) {
+    .kasa-footer-text {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+}

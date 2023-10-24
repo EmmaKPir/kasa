@@ -3,6 +3,7 @@
    width: 84%; 
    margin: auto;
    position: relative;
+   margin-bottom: 38px;
 }
 .kasa-falaise {
     width: 100%;
@@ -33,7 +34,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    width: 73%;
+    width: 84%;
     border-radius: 25px;
     background: #F6F6F6;
     margin: auto;
@@ -88,21 +89,21 @@
     z-index: 2;
 }
 
-@media (min-width: 768px) and (max-width: 942px) {
 
-    .kasa-falaise-text {
-        text-align: left;
-        left: 50px;
-    }
-}
-
-@media (min-width: 426px) and (max-width: 774px) {
+@media (min-width: 426px) and (max-width: 942px) {
 
     .kasa-container-card {
         grid-template-columns: 1fr 1fr;
+        background: $second-color;
+        width: 100%;
     }
     .kasa-card-txt{
         width: 70%;
+    }
+    .kasa-falaise-text {
+        text-align: left;
+        font-size: 2em;
+        left: 50px;
     }
 }
 
@@ -113,6 +114,9 @@
     }
     .kasa-container-card {
         grid-template-columns: 1fr;
+        background: $second-color;
+        width: 80%;
+        padding: 13px 16px 50px 25px;
     }
     .kasa-falaise-text {
         text-align: left;

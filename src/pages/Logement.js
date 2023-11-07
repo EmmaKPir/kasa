@@ -47,11 +47,12 @@ const Logement = () => {
         {logementActif != null ? ( 
         <div className="kasa-logement"> 
           <Slideshow currentLogement={logementActif} />
-          <h2 className="kasa-slider-title">{title}</h2>
-          <p className="kasa-slider-location">{location}</p>
-          <p className="kasa-slider-tags">{tags.map((tag) =>(
-            <li key={tag}>{tag}</li>
-          ))}</p>
+            <h2 className="kasa-slider-title">{title}</h2>
+            <p className="kasa-slider-location">{location}</p>
+            <p className="kasa-slider-tags">{tags.map((tag) =>(
+                <li key={tag}>{tag}</li>
+              ))}
+            </p>
           <div className="kasa-host-rating">
             <div className="kasa-host">
               <p className="host-name">{host.name}</p>

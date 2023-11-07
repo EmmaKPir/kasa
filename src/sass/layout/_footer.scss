@@ -22,8 +22,8 @@
     color: $second-color;
     display: flex;
     justify-content: center;
+    font-family: $style;
     margin-bottom: 40px;
-    Size : 24px;
 }
 
 @media (max-width: 375px) {
@@ -31,5 +31,10 @@
         width: 50%;
         text-align: center;
         margin: auto;
+        margin-top: 0;
+        font-size: 16px;
+    }
+    .kasa-logo2 {
+        margin-bottom: 20px;
     }
 }

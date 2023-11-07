@@ -1,9 +1,11 @@
+@use "../utils/variables" as *;
+
 .kasa-error-number {
-    color: #FF6060;
+    color: $primary-color;
     text-align: center;
-    font-family: Montserrat;
+    font-family: $style;
     width: 100%;
-    font-size: 25vw;
+    font-size: 288px;
     font-style: normal;
     font-weight: 700;
     line-height: 142.6%;
@@ -11,8 +13,8 @@
 }
 
 .kasa-error-txt {
-    color: #FF6060;
-    font-family: Montserrat;
+    color: $primary-color;
+    font-family: $style;
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
@@ -24,8 +26,8 @@
 .kasa-error-home a {
     display: flex;
     justify-content: center;
-    color: #FF6060;
-    font-family: Montserrat;
+    color: $primary-color;
+    font-family: $style;
     width: 50%;
     font-size: 18px;
     font-style: normal;
@@ -35,4 +37,16 @@
     align-items: center;
     margin: auto;
     margin-bottom: 139px;
+    text-align: center;
+}
+
+@media (max-width: 842px) {
+    .kasa-error-number {
+        font-size: 8em;
+        margin-bottom: 60px;
+    }
+    .kasa-error-txt{
+        font-size: 18px;
+        margin-bottom: 60px; 
+    }
 }

@@ -2,7 +2,8 @@
 
 .kasa-container-logement {
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .kasa-logement {
@@ -20,7 +21,7 @@
     width: 100%;
     height: 415px;
     border-radius: 10px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .right-arrow {
@@ -42,16 +43,19 @@
 .kasa-slider-number {
     position: absolute;
     color: $second-color;
-    bottom: 20px;
+    font-family: $style;
+    text-align: center;
+    bottom: 16px;
     left: 0;
     right: 0;
     font-size: 18px;
 }
 
+//appartement name and location
 .kasa-slider-title {
     color: $primary-color;
-    font-family: Montserrat;
-    font-size: 36px;
+    font-family: $style;
+    font-size: 31px;
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%;
@@ -123,7 +127,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 15%;
+    height: 24%;
     right: 34px;
     bottom: 0px;
 }
@@ -132,6 +136,7 @@
 .kasa-host {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     position: absolute;
     right: 81px;
     bottom: 56px;
@@ -152,7 +157,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    width: 62%;
+    width: 58%;
     margin-right: 10px;
 }
 
@@ -188,12 +193,12 @@
 
     .kasa-host {
         position: static;
-        width: 40%;
+        width: 39%;
         margin-bottom: 20px;
     }
 
     .host-name {
-        width: 56%;
+        width: 37%;
     }
 
     .kasa-rating {
@@ -217,5 +222,11 @@
         width: 100%;
         margin: 0;
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 659px) {
+    .kasa-host {
+        width: 93%;
     }
 }

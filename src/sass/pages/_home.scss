@@ -1,6 +1,6 @@
 @use "../utils/variables" as *;
 .kasa-banner {
-   width: 84%; 
+   width: 90%; 
    margin: auto;
    position: relative;
    margin-bottom: 38px;
@@ -21,7 +21,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    top: 92px;
+    top: 76px;
     left: 113px;
     font-size: 3em;
     color: #FFF;
@@ -73,6 +73,7 @@
     border-radius: 10px;
     width: 100%;
     height: 340px;
+    object-fit: cover;
 }
 
 .kasa-card-txt {
@@ -80,7 +81,7 @@
     color: $second-color;
     bottom: 34px;
     left: 12px;
-    font-family: Montserrat;
+    font-family: $style;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -90,36 +91,76 @@
 }
 
 
-@media (min-width: 426px) and (max-width: 942px) {
+@media (min-width: 943px) and (max-width: 1088px) {
 
     .kasa-container-card {
         grid-template-columns: 1fr 1fr;
         background: $second-color;
-        width: 100%;
+        width: 86%;
     }
     .kasa-card-txt{
         width: 70%;
     }
     .kasa-falaise-text {
         text-align: left;
-        font-size: 2em;
-        left: 50px;
+        font-size: 39px;
+        left: 87px;
+        top: 90px;
     }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 681px) and (max-width: 942px) {
+
+    .kasa-container-card {
+        grid-template-columns: 1fr 1fr;
+        background: $second-color;
+        width: 86%;
+    }
+    .kasa-card-txt{
+        width: 70%;
+    }
     .kasa-falaise-text {
-        font-size: 2em;
-        width: 57%;
+        text-align: left;
+        font-size: 30px;
+        left: 72px;
+        top: 90px;
+    }
+}
+
+@media (min-width: 451px) and (max-width: 680px) {
+    .kasa-falaise-text {
+        font-size: 24px;
+        text-align: left;
+        left: 16px;
+        top: 43px;
+        width: 93%;
     }
     .kasa-container-card {
         grid-template-columns: 1fr;
         background: $second-color;
-        width: 80%;
-        padding: 13px 16px 50px 25px;
+        width: 82%;
+        padding: 13px 16px 50px 19px;
     }
+    .kasa-falaise {
+        height: 111px;
+    }
+}
+
+@media (max-width: 450px) {
     .kasa-falaise-text {
+        font-size: 24px;
         text-align: left;
-        left: 50px;
+        left: 16px;
+        top: 35px;
+        width: 93%;
+    }
+    .kasa-container-card {
+        grid-template-columns: 1fr;
+        background: $second-color;
+        width: 82%;
+        padding: 13px 16px 50px 19px;
+    }
+    .kasa-falaise {
+        height: 111px;
     }
 }

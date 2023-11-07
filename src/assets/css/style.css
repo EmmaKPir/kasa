@@ -61,10 +61,12 @@ table {
 }
 
 .kasa-nav {
-  width: 25%;
+  width: 31%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 42px;
+  text-align: center;
 }
 
 .kasa-nav a {
@@ -72,25 +74,39 @@ table {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
   color: #FF6060;
   text-decoration: none;
-  font-size: 1.4em;
+  width: 100%;
+  font-size: 22px;
+  font-family: Montserrat;
 }
 .kasa-nav a.active {
   text-decoration: underline;
 }
 
-@media (max-width: 892px) {
+@media (min-width: 492px) and (max-width: 941px) {
+  .kasa-nav a {
+    font-size: 19px;
+  }
   .kasa-nav {
-    width: 47%;
+    width: 41%;
+  }
+  .kasa-header img {
+    width: 145px;
   }
 }
-@media (max-width: 491px) {
+@media (max-width: 604px) {
   .kasa-header img {
-    width: 29%;
+    width: 135px;
   }
   .kasa-nav {
-    width: 55%;
+    width: 48%;
+    gap: 19px;
+  }
+  .kasa-nav a {
+    text-transform: uppercase;
+    font-size: 12px;
   }
 }
 .kasa-footer {
@@ -115,8 +131,8 @@ table {
   color: #FFFFFF;
   display: flex;
   justify-content: center;
+  font-family: Montserrat;
   margin-bottom: 40px;
-  Size: 24px;
 }
 
 @media (max-width: 375px) {
@@ -124,6 +140,11 @@ table {
     width: 50%;
     text-align: center;
     margin: auto;
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .kasa-logo2 {
+    margin-bottom: 20px;
   }
 }
 .kasa-container-collapse {
@@ -150,20 +171,21 @@ table {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 142.6%;
-  padding-left: 5px;
+  line-height: 36px;
+  padding-left: 10px;
 }
 
 .kasa-description {
   color: #FF6060;
   background: #F6F6F6;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 142.6%;
-  width: 100%;
-  margin: 4px 5px 4px 5px;
+  width: 99%;
+  margin: 1px 5px 5px 5px;
+  padding: 9px;
 }
 
 .kasa-collapse img {
@@ -181,6 +203,7 @@ table {
   top: 2px;
   border-radius: 50%;
   padding: 0;
+  line-height: 46px;
 }
 
 .rotate180 {
@@ -231,13 +254,16 @@ table {
   }
 }
 .openText {
-  animation: openText 0.5s ease-in-out both;
-  margin-bottom: 30px;
+  animation: openText 500Ms ease-in-out both;
 }
 
 @keyframes openText {
   0% {
     transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50%);
     opacity: 0;
   }
   100% {
@@ -246,10 +272,7 @@ table {
   }
 }
 .closeText {
-  animation-name: closeText;
-  animation-duration: 700ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
+  animation: closeText 500ms ease-in-out both;
 }
 
 @keyframes closeText {
@@ -257,19 +280,18 @@ table {
     transform: translateY(0);
     opacity: 1;
   }
+  50% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
   100% {
     transform: translateY(-100%);
     height: 0;
     opacity: 0;
   }
 }
-@media (max-width: 375px) {
-  .closeText {
-    animation: slideUp 0.5s ease-in-out both;
-  }
-}
 .kasa-banner {
-  width: 84%;
+  width: 90%;
   margin: auto;
   position: relative;
   margin-bottom: 38px;
@@ -291,7 +313,7 @@ table {
   text-align: center;
   display: flex;
   justify-content: center;
-  top: 92px;
+  top: 76px;
   left: 113px;
   font-size: 3em;
   color: #FFF;
@@ -343,6 +365,7 @@ table {
   border-radius: 10px;
   width: 100%;
   height: 340px;
+  object-fit: cover;
 }
 
 .kasa-card-txt {
@@ -359,35 +382,72 @@ table {
   z-index: 2;
 }
 
-@media (min-width: 426px) and (max-width: 942px) {
+@media (min-width: 943px) and (max-width: 1088px) {
   .kasa-container-card {
     grid-template-columns: 1fr 1fr;
     background: #FFFFFF;
-    width: 100%;
+    width: 86%;
   }
   .kasa-card-txt {
     width: 70%;
   }
   .kasa-falaise-text {
     text-align: left;
-    font-size: 2em;
-    left: 50px;
+    font-size: 39px;
+    left: 87px;
+    top: 90px;
   }
 }
-@media (max-width: 425px) {
+@media (min-width: 681px) and (max-width: 942px) {
+  .kasa-container-card {
+    grid-template-columns: 1fr 1fr;
+    background: #FFFFFF;
+    width: 86%;
+  }
+  .kasa-card-txt {
+    width: 70%;
+  }
   .kasa-falaise-text {
-    font-size: 2em;
-    width: 57%;
+    text-align: left;
+    font-size: 30px;
+    left: 72px;
+    top: 90px;
+  }
+}
+@media (min-width: 451px) and (max-width: 680px) {
+  .kasa-falaise-text {
+    font-size: 24px;
+    text-align: left;
+    left: 16px;
+    top: 43px;
+    width: 93%;
   }
   .kasa-container-card {
     grid-template-columns: 1fr;
     background: #FFFFFF;
-    width: 80%;
-    padding: 13px 16px 50px 25px;
+    width: 82%;
+    padding: 13px 16px 50px 19px;
   }
+  .kasa-falaise {
+    height: 111px;
+  }
+}
+@media (max-width: 450px) {
   .kasa-falaise-text {
+    font-size: 24px;
     text-align: left;
-    left: 50px;
+    left: 16px;
+    top: 35px;
+    width: 93%;
+  }
+  .kasa-container-card {
+    grid-template-columns: 1fr;
+    background: #FFFFFF;
+    width: 82%;
+    padding: 13px 16px 50px 19px;
+  }
+  .kasa-falaise {
+    height: 111px;
   }
 }
 .kasa-error-number {
@@ -395,7 +455,7 @@ table {
   text-align: center;
   font-family: Montserrat;
   width: 100%;
-  font-size: 25vw;
+  font-size: 288px;
   font-style: normal;
   font-weight: 700;
   line-height: 142.6%;
@@ -427,11 +487,23 @@ table {
   align-items: center;
   margin: auto;
   margin-bottom: 139px;
+  text-align: center;
 }
 
+@media (max-width: 842px) {
+  .kasa-error-number {
+    font-size: 8em;
+    margin-bottom: 60px;
+  }
+  .kasa-error-txt {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+}
 .kasa-container-logement {
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .kasa-logement {
@@ -449,7 +521,7 @@ table {
   width: 100%;
   height: 415px;
   border-radius: 10px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .right-arrow {
@@ -471,7 +543,9 @@ table {
 .kasa-slider-number {
   position: absolute;
   color: #FFFFFF;
-  bottom: 20px;
+  font-family: Montserrat;
+  text-align: center;
+  bottom: 16px;
   left: 0;
   right: 0;
   font-size: 18px;
@@ -480,7 +554,7 @@ table {
 .kasa-slider-title {
   color: #FF6060;
   font-family: Montserrat;
-  font-size: 36px;
+  font-size: 31px;
   font-style: normal;
   font-weight: 500;
   line-height: 142.6%;
@@ -550,7 +624,7 @@ table {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 15%;
+  height: 24%;
   right: 34px;
   bottom: 0px;
 }
@@ -558,6 +632,7 @@ table {
 .kasa-host {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   position: absolute;
   right: 81px;
   bottom: 56px;
@@ -578,7 +653,7 @@ table {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  width: 62%;
+  width: 58%;
   margin-right: 10px;
 }
 
@@ -610,11 +685,11 @@ table {
   }
   .kasa-host {
     position: static;
-    width: 40%;
+    width: 39%;
     margin-bottom: 20px;
   }
   .host-name {
-    width: 56%;
+    width: 37%;
   }
   .kasa-rating {
     position: static;
@@ -634,6 +709,11 @@ table {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 659px) {
+  .kasa-host {
+    width: 93%;
   }
 }
 

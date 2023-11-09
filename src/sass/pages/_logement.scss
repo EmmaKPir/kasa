@@ -63,6 +63,7 @@
     display: flex;
     margin: auto;
     text-align: left;
+    margin-top: 20px;
 }
 
 .kasa-slider-location {
@@ -114,6 +115,7 @@
     margin-right: 95px;
     margin-left: 57px;
     margin: 30px;
+    list-style-type: none;
 }
 
 .kasa-container-description p{
@@ -157,7 +159,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    width: 58%;
+    width: 36%;
     margin-right: 10px;
 }
 
@@ -190,34 +192,25 @@
         margin :auto;
         right: 0;
     }
-
     .kasa-host {
         position: static;
         width: 39%;
         margin-bottom: 20px;
     }
-
-    .host-name {
-        width: 37%;
-    }
-
     .kasa-rating {
         position: static;
         width: 79%;
         align-items: center;
     }
-
     .kasa-star {
         width: 21px;
         height: 21px;
     }
-
     .kasa-container-equipments {
         display: flex;
         flex-direction: column;
         width: 86%;
     }
-
     .kasa-container-equipments .kasa-collapse {
         width: 100%;
         margin: 0;
@@ -226,7 +219,23 @@
 }
 
 @media (max-width: 659px) {
+    .kasa-banner {
+        width: 86%;
+    }
     .kasa-host {
-        width: 93%;
+        width: 100%;
+    }
+    .host-name {
+        padding-right: 10px;
+    }
+    .kasa-container-equipments .kasa-description {
+       width: 92%;
+       padding-left: 20px;
+    }
+    .kasa-container-equipments .kasa-collapse {
+        width: 95%;
+    }
+    .slider-image {
+        height: 255px;
     }
 }

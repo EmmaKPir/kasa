@@ -12,11 +12,10 @@
 }
 
 .kasa-nav {
-    width: 31%;
+    width: 309px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 42px;
     text-align: center;
 }
 
@@ -28,7 +27,7 @@
     text-align: center;
     color: $primary-color;
     text-decoration: none;
-    width: 100%;
+    width: 136px;
     font-size: 22px;
     font-family: $style;
     &.active {
@@ -41,7 +40,7 @@
         font-size: 19px;
     }
     .kasa-nav {
-        width: 41%;
+        width: 200px;
     }
     .kasa-header img {
         width: 145px;
@@ -53,8 +52,7 @@
         width: 135px;
     }
     .kasa-nav {
-        width: 48%;
-        gap: 19px;
+        width: 190px;
     }
     .kasa-nav a {
         text-transform: uppercase;
